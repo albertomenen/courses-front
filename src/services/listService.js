@@ -14,6 +14,7 @@ class ListService {
       });
   }
 
+
   getList(id) {
     return this.api.get(`/${id}`).then(({ data }) => data).catch(err => console.error(err))
   }

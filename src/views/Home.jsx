@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { NavLink } from 'react-router-dom'; 
-import clientService from '../services/clientService';
+import clientService from '../services/courseService';
 
 
 export default function Home() {
@@ -18,51 +18,32 @@ export default function Home() {
     getClients();
   },);
 
- 
 
-
-  // const initialState = {
-  //   name: '',
-  //   surname: '',
-  //   phone: '',
-  //   email: "",
-  //   bill: 0
-  // }
-
-  
-// const handleSubmit = (e) => {
-//   e.preventDefault();
-//   setNewCourse(initialState);
-// }
   
   return (
-    <div className='home-container'  >
-      <div className="button-container">
-        <button className="home-button"> <NavLink to="/private">Add a Client </NavLink></button>
-        <button className="home-button"> <NavLink to="/list">Find a Client </NavLink> </button>
-      </div>
-      <div className="client-list-container">
+    <div className="home-container">
+    <div className="hero-section">
+      <h1>Aprende de los mejores</h1>
+      <p>Aprende a hacer dinero en la siesta</p>
+    </div>
+    <div className="course-section">
+      <h2>Featured Courses</h2>
+      <div className="course-grid">
+        <div className="course-card">
+          <div className="course-title">Desarrolo Web</div>
+          <div className="course-description">Curso para aprender a ser un fullstack developer</div>
+          <button className="course-button">Apuntate ahora</button>
+        </div>
+        <div className="course-card">
+          <div className="course-title">Análisis de datos</div>
+          <div className="course-description">¿ Quieres aprender a saber lo que hay detrás de los números y convertirte en un experto? </div>
+          <button className="course-button">Apuntate ahora</button>
+        </div>
+        {/* ... */}
 
-      <div className='step1-home'>
-        <h2> Step 1: Install Whatsapp Web </h2>
-        <button className="download-btn">
-            <a href="https://www.whatsapp.com/download/?lang=es" target="_blank" rel="noopener noreferrer">
-              Download Whatsapp Web
-            </a>
-        </button>
-      </div>
-
-      <div className='step1-home'>
-        <h2> Step 2: Agrega tus contactos</h2>
-      </div>
-
-      <div className='step1-home'>
-        <h2> Step 3: Hazle click al boton guasa</h2>
-      </div>
-
-       
       </div>
     </div>
+  </div>
   )
 }
 

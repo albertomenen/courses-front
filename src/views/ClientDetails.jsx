@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import clientService from '../services/clientService';
+import clientService from '../services/courseService';
 
 export default function ClientDetails() {
   const { clientId } = useParams();

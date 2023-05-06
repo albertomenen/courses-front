@@ -1,4 +1,5 @@
 import './App.css';
+import React from "react"
 import { Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import Home from './views/Home';
@@ -7,10 +8,10 @@ import ErrorPage from './views/ErrorPage';
 import NotFound from './views/NotFound';
 import Signup from './views/auth/Signup';
 import Login from './views/auth/Login';
-import AddClient from "./components/addClient.jsx"
+import AddClient from "./components/addCourse.jsx"
 import AddList from './components/addList';
 import Footer from "./components/Footer"
-import ClientCard from "./components/ClientCard"
+import ClientCard from "./components/CourseCard"
 import PrivateView from './views/PrivateView';
 import ListView from './views/ListView';
 import IsPrivate from './components/IsPrivate';

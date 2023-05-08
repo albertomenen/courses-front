@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import clientService from '../services/courseService';
 
 
+
 export default function Home() {
   const [ setClients] = useState([])
 
@@ -23,8 +24,20 @@ export default function Home() {
   return (
     <div className="home-container">
     <div className="hero-section">
-      <h1>Aprende de los mejores</h1>
-      <p>Aprende a hacer dinero en la siesta</p>
+      <div className="video-section">
+        <video
+          className="hero-video"
+          src="/video-siestaFunds.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
+        <div className="hero-text">
+          <h1 className='video-text'>Aprende de los mejores</h1>
+          <p className='video-p'>Aprende a hacer dinero en la siesta</p>
+        </div>
+      </div>
     </div>
     <div className="course-section">
       <h2>Featured Courses</h2>

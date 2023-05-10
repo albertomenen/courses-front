@@ -8,7 +8,7 @@ function Footer() {
           <h4>Contacto</h4>
           <p>
             Teléfono: +34 (542) 657-435<br />
-            Correo electrónico: ayuda@guasa.com
+            Correo electrónico: ayuda@siestafunds.com
           </p>
         </div>
         <div className="footer-address">

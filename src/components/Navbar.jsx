@@ -36,6 +36,12 @@ export default function Navbar() {
             <NavLink to="/list">My courses</NavLink>
           </li>
         )}
+        {isLoggedIn && user && user.is_instructor && (
+          <li className="navbar-item">
+            <NavLink to="/instructor">Instructor</NavLink>
+          </li>
+        )}
+
         {isLoggedIn && user && (
           <li className="navbar-item">
             <NavLink to={`/user/${user._id}`}>Profile</NavLink>

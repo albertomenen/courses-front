@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import ErrorPage from './views/ErrorPage';
 import NotFound from './views/NotFound';
 import Signup from './views/auth/Signup';
+import IsInstructor from './components/isInstructor';
 import Login from './views/auth/Login';
 import AddClient from "./components/addCourse.jsx"
 import AddList from './components/addList';
@@ -19,6 +20,7 @@ import EditClient from './views/EditClient';
 import ClientDetails from './views/ClientDetails';
 import UserEdit from './views/UserEdit';
 import Profile from "./views/Profile"
+import InstructorView from './views/InstructorView';
 import './index.css';
 
 
@@ -34,6 +36,7 @@ function App() {
         <Route path="/private" element={<IsPrivate><PrivateView /></IsPrivate>} />
         <Route path="/list" element={<ListView />} /> 
         <Route path="/addClient" element={<AddClient />} /> 
+        <Route path="/instructor" element={<IsInstructor><InstructorView /></IsInstructor>} /> 
         <Route path="/client/:clientId" element={<ClientDetails/>} />
         <Route path="/edit/:clientId" element={<EditClient />} />
         <Route path="/user/:userId" element={<Profile />} />

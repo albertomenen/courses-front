@@ -6,6 +6,8 @@ export default function Navbar() {
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
   const navigate = useNavigate();
 
+  console.log(user);   // Debugging 
+
   return (
     <div className="navbar-div">
       <div className="nav-content">

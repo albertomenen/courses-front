@@ -1,85 +1,62 @@
 import React, { useState } from 'react';
 
-
-export default function AddClient({handleAddClient}) {
-  const [clientData, setClientData] = useState({
-    name: '',
-    surname: '',
-    phone: '',
-    email: '',
-    bill: '',
+export default function AddCourse({ handleAddCourse }) {
+  const [courseData, setCourseData] = useState({
+    title: '',
+    description: '',
+    price: '',
+    instructor: '',
   });
 
-
-
   const handleChange = (event) => {
-    setClientData({ ...clientData, [event.target.name]: event.target.value });
+    setCourseData({ ...courseData, [event.target.name]: event.target.value });
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    handleAddClient(clientData);
+    handleAddCourse(courseData);
   };
 
   return (
-    <div className="add-client-container">
-      <h1>Add Client</h1>
+    <div className="add-course-container">
+      <h1>Añadir curso</h1>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Nombre:</label>
+        <label htmlFor="title">Título:</label>
         <input
           type="text"
-          id="name"
-          name="name"
-          value={clientData.name}
+          id="title"
+          name="title"
+          value={courseData.title}
           onChange={handleChange}
           required
         />
-        <label htmlFor="surname">Apellido:</label>
-        <input
-          type="text"
-          id="surname"
-          name="surname"
-          value={clientData.surname}
-          onChange={handleChange}
-          required
-        />
-        <label htmlFor="phone">Número de teléfono:</label>
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          value={clientData.phone}
-          onChange={handleChange}
-          required
-        />
-        <label htmlFor="email">Correo electrónico:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={clientData.email}
-          onChange={handleChange}
-          required
-        />
-         <label htmlFor="description">Description: </label>
-        <input
-          type="desc"
+        <label htmlFor="description">Descripción:</label>
+        <textarea
           id="description"
           name="description"
-          value={clientData.description}
+          value={courseData.description}
           onChange={handleChange}
           required
         />
-        <label htmlFor="bill">Factura:</label>
+        <label htmlFor="price">Precio:</label>
+        <input
+          type="number"
+          id="price"
+          name="price"
+          value={courseData.price}
+          onChange={handleChange}
+          required
+        />
+        <label htmlFor="instructor">Instructor:</label>
         <input
           type="text"
-          id="bill"
-          name="bill"
-          value={clientData.bill}
+          id="instructor"
+          name="instructor"
+          value={courseData.instructor}
           onChange={handleChange}
           required
         />
-        <button type="submit" >Agregar cliente</button>
+        <button type="submit">Añadir curso</button>
       </form>
     </div>
   );

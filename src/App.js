@@ -17,7 +17,7 @@ import PrivateView from './views/PrivateView';
 import ListView from './views/ListView';
 import IsPrivate from './components/IsPrivate';
 import EditClient from './views/EditClient';
-import ClientDetails from './views/ClientDetails';
+import CourseDetails from './components/CourseDetails';
 import UserEdit from './views/UserEdit';
 import Profile from "./views/Profile"
 import InstructorView from './views/InstructorView';
@@ -37,7 +37,7 @@ function App() {
         <Route path="/list" element={<ListView />} /> 
         <Route path="/addClient" element={<AddClient />} /> 
         <Route path="/instructor" element={<IsInstructor><InstructorView /></IsInstructor>} /> 
-        <Route path="/client/:clientId" element={<ClientDetails/>} />
+        <Route path="/course/:courseId" element={<CourseDetails/>} />
         <Route path="/edit/:clientId" element={<EditClient />} />
         <Route path="/user/:userId" element={<Profile />} />
         <Route path="/addList" element={<AddList />} />       

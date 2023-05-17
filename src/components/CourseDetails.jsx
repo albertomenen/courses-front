@@ -54,6 +54,9 @@ export default function CourseDetails() {
       <p className="course-details-description">{course.description}</p>
       {image && <img src={image} alt="Preview" />}
       <button onClick={handleUpload}>Upload Image</button>
+      <input type="file" name="course-cover-image" />
+      
+
       
     </div>
   );

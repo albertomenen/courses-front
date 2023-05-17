@@ -7,6 +7,8 @@ export default function AddCourse({ handleAddCourse }) {
     price: '',
     instructor: '',
   });
+  const [image, setImageUrl] = useState(null);
+
 
   const handleChange = (event) => {
     setCourseData({ ...courseData, [event.target.name]: event.target.value });
@@ -15,6 +17,25 @@ export default function AddCourse({ handleAddCourse }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     handleAddCourse(courseData);
+  };
+
+  const handleUpload = () => {
+    const widget = window.cloudinary.createUploadWidget(
+      {
+        cloudName: process.env.cloudname,
+        uploadPreset: 'myUploadPreset',
+      },
+      (error, result) => {
+        if (error) {
+          console.error('Error with Cloudinary upload widget:', error);
+        } else if (result.event === 'success') {
+          // Guarda el URL de la imagen en el estado de tu componente
+          setImageUrl(result.info.url);
+        }
+      }
+    );
+  
+    widget.open();
   };
 
   return (
@@ -56,6 +77,10 @@ export default function AddCourse({ handleAddCourse }) {
           onChange={handleChange}
           required
         />
+        <label htmlFor="image">Course Image:</label>
+        <button onClick={handleUpload}>Upload Image</button>
+        {image && <img src={image} alt="Preview" />}
+
         <button type="submit">Añadir curso</button>
       </form>
     </div>

@@ -23,7 +23,7 @@ export default function AddCourse({ handleAddCourse }) {
     const widget = window.cloudinary.createUploadWidget(
       {
         cloudName: process.env.cloudname,
-        uploadPreset: 'myUploadPreset',
+        uploadPreset: process.env.CLOUD_API_PREFERENCES,
       },
       (error, result) => {
         if (error) {

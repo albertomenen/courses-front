@@ -33,7 +33,7 @@ export default function CourseDetails() {
         if (error) {
           console.error('Error with Cloudinary upload widget:', error);
         } else if (result.event === 'success') {
-          // Guarda el URL de la imagen en el estado de tu componente
+
           setImageUrl(result.info.url);
         }
       }

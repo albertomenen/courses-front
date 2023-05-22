@@ -56,8 +56,6 @@ export default function CourseDetails() {
       <button onClick={handleUpload}>Upload Image</button>
       <input type="file" name="course-cover-image" />
       
-
-      
     </div>
   );
 }

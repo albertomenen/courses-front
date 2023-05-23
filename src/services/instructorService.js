@@ -18,6 +18,10 @@ class InstructorService {
     return this.api.get(`/${id}`).then(({ data }) => data).catch(err => console.error(err))
   }
 
+  getInstructors() {
+    return this.api.get('/').then(({ data }) => data).catch(err => console.error(err))
+  }
+
   editInstructor(id, body) {
     return this.api.put(`/${id}`, body).then(({ data }) => data).catch(err => console.error(err))
   }

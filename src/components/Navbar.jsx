@@ -11,7 +11,7 @@ export default function Navbar() {
   return (
     <div className="navbar-div">
       <div className="nav-content">
-        <h1 className="logo">Siesta Funds </h1>
+        <img src= "/fiestafunds.png" alt = "logo-img"></img>
         {user && <p className="welcome">Hello {user.username}!</p>}
       </div>
       <ul className="navbar-menu">

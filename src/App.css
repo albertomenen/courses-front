@@ -54,6 +54,32 @@
   height: auto; 
 }
 
+.navbar-item-instructor {
+  background-color: #E57C23;  /* Cambia el color de fondo al que prefieras */
+  color: #ffffff;  /* Cambia el color del texto al que prefieras */
+  padding: 10px 20px;  /* Ajusta el padding para cambiar el tamaño del botón */
+  border-radius: 5px;  /* Añade bordes redondeados al botón */
+  transition: background-color 0.3s ease;  /* Añade una transición suave cuando el color de fondo cambia */
+}
+
+.navbar-item-instructor a {
+  color: #ffffff;  /* Asegura que el texto del enlace también sea blanco */
+}
+
+.navbar-item-instructor:hover {
+  background-color: #0056b3;  /* Cambia el color de fondo cuando se pasa el ratón por encima */
+}
+
+.navbar-item-instructor a:hover {
+  text-decoration: none;  /* Quita el subrayado del enlace cuando se pasa el ratón por encima */
+}
+
+/* Esta es la forma en la que quito el decorado y el subrayado del codigo */
+
+a {
+  text-decoration: none;
+}
+
 /* Media queries for responsive design */
 @media screen and (max-width: 768px) {
   .navbar-div {

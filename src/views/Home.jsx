@@ -34,7 +34,7 @@ export default function Home() {
         />
         <div className="hero-text">
           <h1 className='video-text'>Aprende de los mejores</h1>
-          <p className='video-p'>Aprende a hacer dinero en la siesta</p>
+          <p className='video-p'>Cursos de las mejores escuelas de negocios en tu mano</p>
         </div>
       </div>
     </div>
@@ -42,7 +42,7 @@ export default function Home() {
       <h2>Featured Courses</h2>
       <div className="course-grid">
         <div className="course-card">
-          <div className="course-title">Desarrolo Web</div>
+          <div className="course-title">Desarrollo Web</div>
           <div className="course-description">Curso para aprender a ser un fullstack developer</div>
           <button className="course-button">Apuntate ahora</button>
         </div>

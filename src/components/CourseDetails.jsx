@@ -27,7 +27,7 @@ export default function CourseDetails() {
     const widget = window.cloudinary.createUploadWidget(
       {
         cloudName: process.env.cloudname,
-        uploadPreset: 'myUploadPreset',
+        uploadPreset: 'testingRoutes',
       },
       (error, result) => {
         if (error) {
@@ -50,11 +50,10 @@ export default function CourseDetails() {
       <Image cloudName="myCloudName" publicId={image} width="300" crop="scale" />
       <img className="course-details-image" src={course.imageUrl} alt={course.title} />
       <h2 className="course-details-title">{course.title}</h2>
-      <h3 className="course-details-instructor">Instructor: {course.instructor}</h3>
+      <h3 className="course-details-instructor">Instructor: {course.instructorName}</h3>
       <p className="course-details-description">{course.description}</p>
       {image && <img src={image} alt="Preview" />}
-      <button onClick={handleUpload}>Upload Image</button>
-      <input type="file" name="course-cover-image" />
+      
       
     </div>
   );

@@ -39,7 +39,7 @@ export default function Navbar() {
           </li>
         )}
         {isLoggedIn && user && user.is_instructor && (
-          <li className="navbar-item">
+          <li className="navbar-item-instructor">
             <NavLink to="/instructor">Instructor</NavLink>
           </li>
         )}

@@ -45,16 +45,24 @@ export default function CourseDetails() {
 
   if (!course) return <div>Loading...</div>;
 
-  return (
+   return (
     <div className="course-details-container">
-      <Image cloudName="myCloudName" publicId={image} width="300" crop="scale" />
-      <img className="course-details-image" src={course.imageUrl} alt={course.title} />
-      <h2 className="course-details-title">{course.title}</h2>
-      <h3 className="course-details-instructor">Instructor: {course.instructorName}</h3>
-      <p className="course-details-description">{course.description}</p>
-      {image && <img src={image} alt="Preview" />}
-      
-      
+      <section className="course-details-image-section">
+        <Image cloudName="myCloudName" publicId={image} width="300" crop="scale" />
+        <img className="course-details-image" src={course.imageUrl} alt={course.title} />
+      </section>
+
+      <section className="course-details-text-section">
+        <h2 className="course-details-title">{course.title}</h2>
+        <h3 className="course-details-instructor">Instructor: {course.instructorName}</h3>
+        <p className="course-details-description">{course.description}</p>
+      </section>
+
+      <section className="course-details-button-section">
+        {image && <img src={image} alt="Preview" />}
+        <button className='button-courseDetail'>Inscribe ya</button>
+      </section>
     </div>
   );
 }
+

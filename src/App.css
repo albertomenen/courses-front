@@ -183,35 +183,61 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2em;
-  max-width: 800px;
-  margin: 0 auto;
-  box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1);
+  justify-content: space-around;
+  margin: 50px;
+  padding: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.course-details-image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-right: 25%;
+}
+
+
+.course-details-text-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.course-details-button-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-courseDetail {
+  font-size: 16px;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-courseDetail:hover {
+  background-color: #0056b3;
 }
 
 .course-details-image {
-  width: 100%;
+  max-width: 100%;
   height: auto;
-  object-fit: cover;
 }
 
-.course-details-title {
-  margin-top: 1em;
-  text-align: center;
-  font-size: 2em;
-  font-weight: bold;
+.course-details-title, .course-details-instructor, .course-details-description {
+  margin-bottom: 10px;
 }
 
-.course-details-instructor {
-  margin-top: 0.5em;
-  text-align: center;
-  font-size: 1.5em;
-}
-
-.course-details-description {
-  margin-top: 1em;
-  text-align: justify;
-}
 
 
 

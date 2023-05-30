@@ -19,6 +19,7 @@ import IsPrivate from './components/IsPrivate';
 import EditClient from './views/EditClient';
 import CourseDetails from './components/CourseDetails';
 import UserEdit from './views/UserEdit';
+import StripeCheckOut from "./views/StripeCheckOut"
 import Profile from "./views/Profile"
 import InstructorView from './views/InstructorView';
 import './index.css';
@@ -42,6 +43,7 @@ function App() {
         <Route path="/user/:userId" element={<Profile />} />
         <Route path="/addList" element={<AddList />} />       
         <Route path="/clientCard" element={<ClientCard />} /> 
+        <Route path = "/StripeCheckOut" element = {<StripeCheckOut />} />
         <Route path="/user/edit/:userId" element={<UserEdit />} />
         <Route path="/error" element={<ErrorPage />} />
         <Route path="*" element={<NotFound />} />
